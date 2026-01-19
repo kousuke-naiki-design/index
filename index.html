@@ -262,7 +262,8 @@
 
                 // 着用アイテム
                 if (selections.apparel.value && selections.apparel.value.trim() !== "") {
-                    newPrompt += `${modelDescription}が、${selections.apparel.value}。`;
+                    // 修正: モデル要素の繰り返しを削除
+                    newPrompt += `${selections.apparel.value}。`;
                 }
 
                 // ポーズ
